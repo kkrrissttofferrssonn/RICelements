@@ -64,22 +64,25 @@ export default {
 <style>
 /*Card*/
 .card {
-  background-color: Green;
+  background: DarkGreen;
   color: Black;
   padding: 1rem;
+  padding-top: 0.3rem;
 }
 
 .cards {
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: 0.5rem;
 }
 .cardTitle {
   display: flex;
   justify-content: center;
   font-weight: Bold;
-  color: red;
+  color: Black;
+  text-decoration: underline;
+  margin-top: 0.1rem;
 }
 
 li {
@@ -92,10 +95,10 @@ li {
   background: Orange;
 }
 .route {
-  background: #87ceeb;
+  background: SkyBlue;
 }
 .neuro {
-  background: #ee82ee;
+  background: Violet;
 }
 #R {
   background-color: ;
