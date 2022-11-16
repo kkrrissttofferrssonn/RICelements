@@ -1,18 +1,22 @@
 <template>
   <div id="app">
     <div class="cards">
-      <div class="card">ONE</div>
-      <div class="card">TWO</div>
-      <div class="card">THREE</div>
-      <div class="card">FOUR</div>
-      <div class="card">FIVE</div>
-      <div class="card">SIX</div>
-      <div class="card">SEVEN</div>
-      <div class="card">EIGHT</div>
-      <div class="card">NINE</div>
-      <div class="card">TEN</div>
-      <div class="card">ELEVEN</div>
-      <div class="card">TWELVE</div>
+      <div id="R" class="card">
+        <h1>R</h1>
+        <ul>
+          <li>The</li>
+          <li>Content</li>
+          <li>Goes</li>
+          <li>Here</li>
+        </ul>
+      </div>
+
+      <div id="I" class="card">I</div>
+      <div id="C" class="card">C</div>
+      <div id="RI" class="card">RI</div>
+      <div id="RC" class="card">RC</div>
+      <div id="IC" class="card">IC</div>
+      <div id="RIC" class="card">RIC</div>
     </div>
   </div>
 </template>
@@ -30,10 +34,9 @@ export default {
 
 <style>
 .card {
-  background-color: dodgerblue;
-  color: white;
+  background-color: Green;
+  color: Black;
   padding: 1rem;
-  height: 4rem;
 }
 
 .cards {
@@ -43,10 +46,14 @@ export default {
   grid-gap: 1rem;
 }
 
+#R {
+  background-color: ;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
   .cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
