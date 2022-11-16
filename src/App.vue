@@ -4,7 +4,7 @@
       <div id="R" class="card">
         <h1>R</h1>
         <ul>
-          <li>The</li>
+          <li class="movement">The</li>
           <li>Content</li>
           <li>Goes</li>
           <li>Here</li>
@@ -45,7 +45,9 @@ export default {
   display: grid;
   grid-gap: 1rem;
 }
-
+.movement{
+  background-color:Orange ;
+}
 #R {
   background-color: ;
 }
