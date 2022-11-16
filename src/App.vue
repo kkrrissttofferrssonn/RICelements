@@ -2,21 +2,50 @@
   <div id="app">
     <div class="cards">
       <div id="R" class="card">
-        <h1>R</h1>
+        <h1 class="cardTitle">R</h1>
         <ul>
           <li class="movement">The</li>
-          <li>Content</li>
-          <li>Goes</li>
+          <li class="route">Content</li>
+          <li class="neuro">Goes</li>
           <li>Here</li>
         </ul>
       </div>
-
-      <div id="I" class="card">I</div>
-      <div id="C" class="card">C</div>
-      <div id="RI" class="card">RI</div>
-      <div id="RC" class="card">RC</div>
-      <div id="IC" class="card">IC</div>
-      <div id="RIC" class="card">RIC</div>
+      <div id="I" class="card">
+        <h1 class="cardTitle">I</h1>
+        <ul>
+          <li id="" class=""></li>
+        </ul>
+      </div>
+      <div id="C" class="card">
+        <h1 class="cardTitle">C</h1>
+        <ul>
+          <li id="" class=""></li>
+        </ul>
+      </div>
+      <div id="RI" class="card">
+        <h1 class="cardTitle">RI</h1>
+        <ul>
+          <li id="" class=""></li>
+        </ul>
+      </div>
+      <div id="RC" class="card">
+        <h1 class="cardTitle">RC</h1>
+        <ul>
+          <li id="" class=""></li>
+        </ul>
+      </div>
+      <div id="IC" class="card">
+        <h1 class="cardTitle">IC</h1>
+        <ul>
+          <li id="" class=""></li>
+        </ul>
+      </div>
+      <div id="RIC" class="card">
+        <h1 class="cardTitle">RIC</h1>
+        <ul>
+          <li id="" class=""></li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -33,6 +62,7 @@ export default {
 </script>
 
 <style>
+/*Card*/
 .card {
   background-color: Green;
   color: Black;
@@ -45,12 +75,33 @@ export default {
   display: grid;
   grid-gap: 1rem;
 }
-.movement{
-  background-color:Orange ;
+.cardTitle {
+  display: flex;
+  justify-content: center;
+  font-weight: Bold;
+  color: red;
+}
+
+li {
+  padding: 0.3rem;
+}
+
+/*Movement or Route or Neuro*/
+
+.movement {
+  background: Orange;
+}
+.route {
+  background: #87ceeb;
+}
+.neuro {
+  background: #ee82ee;
 }
 #R {
   background-color: ;
 }
+
+/*Grid*/
 
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
