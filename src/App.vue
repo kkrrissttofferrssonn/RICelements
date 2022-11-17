@@ -1,5 +1,14 @@
 <template>
   <div id="app">
+    <div id="hexagonChart">
+      <div>
+        <svg width="200" height="200">
+          <PolyGraph :stats="stats"></PolyGraph>
+        </svg>
+      </div>
+    </div>
+    <pre id="raw">{{ stats }}</pre>
+
     <div class="cards">
       <div id="R" class="card">
         <h1 class="cardTitle">R</h1>
@@ -51,12 +60,40 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import PolyGraph from './PolyGraph.vue';
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld,
+    PolyGraph,
+  },
+  data: () => ({
+    newLabel: '',
+    stats: [
+      { label: 'A', value: 100 },
+      { label: 'B', value: 100 },
+      { label: 'C', value: 100 },
+      { label: 'D', value: 100 },
+      { label: 'E', value: 100 },
+      { label: 'F', value: 100 },
+    ],
+  }),
+  methods: {
+    add(e) {
+      e.preventDefault();
+      if (!this.newLabel) return;
+      this.stats.push({
+        label: this.newLabel,
+        value: 100,
+      });
+      this.newLabel = '';
+    },
+    remove(stat) {
+      if (this.stats.length > 3) {
+        this.stats.splice(this.stats.indexOf(stat), 1);
+      } else {
+        alert("Can't delete more!");
+      }
+    },
   },
 };
 </script>
@@ -104,7 +141,7 @@ li {
   background-color: ;
 }
 
-/*Grid*/
+/* Grid */
 
 /* Screen larger than 600px? 2 column */
 @media (min-width: 600px) {
@@ -118,5 +155,34 @@ li {
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/* Hexagon Chart */
+
+.hexagonChart {
+  display: flex;
+}
+
+polygon {
+  fill: #42b983;
+  opacity: 0.75;
+}
+
+circle {
+  fill: transparent;
+  stroke: #999;
+}
+
+text {
+  color: #4ec9b0;
+  font-size: 20px;
+  fill: #666;
+}
+
+#raw {
+  color: white;
+  position: relative;
+  top: 0;
+  left: 300px;
 }
 </style>
